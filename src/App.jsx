@@ -1,5 +1,6 @@
 import './App.css'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { MapPin, Zap, Palette } from 'lucide-react'
 
 function App() {
@@ -19,38 +20,50 @@ function App() {
         
         <main className="max-w-4xl mx-auto">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="p-6 border rounded-lg bg-card text-card-foreground">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold">Welcome</h2>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                This is your new React application with shadcn/ui integration.
-              </p>
-              <Button size="sm" variant="secondary">Explore</Button>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  Welcome
+                </CardTitle>
+                <CardDescription>
+                  This is your new React application with shadcn/ui integration.
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button size="sm" variant="secondary">Explore</Button>
+              </CardFooter>
+            </Card>
             
-            <div className="p-6 border rounded-lg bg-card text-card-foreground">
-              <div className="flex items-center gap-2 mb-3">
-                <Zap className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold">Components</h2>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Ready to use beautiful UI components from shadcn/ui.
-              </p>
-              <Button size="sm" variant="secondary">View Components</Button>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Zap className="h-5 w-5 text-primary" />
+                  Components
+                </CardTitle>
+                <CardDescription>
+                  Ready to use beautiful UI components from shadcn/ui.
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button size="sm" variant="secondary">View Components</Button>
+              </CardFooter>
+            </Card>
             
-            <div className="p-6 border rounded-lg bg-card text-card-foreground">
-              <div className="flex items-center gap-2 mb-3">
-                <Palette className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold">Tailwind CSS</h2>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Styled with Tailwind CSS and CSS variables for theming.
-              </p>
-              <Button size="sm" variant="secondary">Customize</Button>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Palette className="h-5 w-5 text-primary" />
+                  Tailwind CSS
+                </CardTitle>
+                <CardDescription>
+                  Styled with Tailwind CSS and CSS variables for theming.
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button size="sm" variant="secondary">Customize</Button>
+              </CardFooter>
+            </Card>
           </div>
         </main>
       </div>
